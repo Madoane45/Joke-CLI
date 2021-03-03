@@ -1,0 +1,20 @@
+
+[1mFrom:[0m /home/madoane/development/code/phase1/joke_project/Lib/api.rb:23 Api.chuck_norris_random:
+
+     [1;34m9[0m: [32mdef[0m [1;36mself[0m.[1;34mchuck_norris_random[0m
+    [1;34m10[0m:     url = URI([31m[1;31m"[0m[31mhttps://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random[1;31m"[0m[31m[0m)
+    [1;34m11[0m: 
+    [1;34m12[0m:     http = [1;34;4mNet[0m::[1;34;4mHTTP[0m.new(url.host, url.port)
+    [1;34m13[0m:     http.use_ssl = [1;36mtrue[0m
+    [1;34m14[0m:     http.verify_mode = [1;34;4mOpenSSL[0m::[1;34;4mSSL[0m::[1;34;4mVERIFY_NONE[0m
+    [1;34m15[0m: 
+    [1;34m16[0m:     request = [1;34;4mNet[0m::[1;34;4mHTTP[0m::[1;34;4mGet[0m.new(url)
+    [1;34m17[0m:     request[[31m[1;31m"[0m[31maccept[1;31m"[0m[31m[0m] = [31m[1;31m'[0m[31mapplication/json[1;31m'[0m[31m[0m
+    [1;34m18[0m:     request[[31m[1;31m"[0m[31mx-rapidapi-key[1;31m"[0m[31m[0m] = [31m[1;31m'[0m[31m8d7b63cfafmsha8422cf6e64bf68p1ccf95jsn6b154480b93d[1;31m'[0m[31m[0m
+    [1;34m19[0m:     request[[31m[1;31m"[0m[31mx-rapidapi-host[1;31m"[0m[31m[0m] = [31m[1;31m'[0m[31mmatchilling-chuck-norris-jokes-v1.p.rapidapi.com[1;31m'[0m[31m[0m
+    [1;34m20[0m: 
+    [1;34m21[0m:     response = http.request(request)
+    [1;34m22[0m:     [1;34;4mJSON[0m.parse(response.body)
+ => [1;34m23[0m:     binding.pry
+    [1;34m24[0m: [32mend[0m
+
