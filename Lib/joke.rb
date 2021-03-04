@@ -1,27 +1,27 @@
+#require_relative "./api.rb"
 class Joke
-    
-    attr_accessor :setup, :punchline, :type
     
     @@all = []
 
     def initialize (data_hash)
-        data_hash["body"][0].each do |key, value|
-            if !key.include?("_")                
-                self.send("#{key}=", value)
-            end
+        
+        data_hash.each do |key, value|
+            self.class.attr_accessor(key)
+            self.send("#{key}=", value)
+            
         end
+               
         @@all << self
     end
-       
-    def get_setup
-        self.body["setup"]
-    end
-
-    def get_punchline
-        self.body["punchline"]
+    # find one the types of jokes ( take in a type input )
+    def self.single
+        @@all.select do |object|
+            object.type == "single"
+        end
     end
 
     def self.all
         @@all
     end
+
 end
