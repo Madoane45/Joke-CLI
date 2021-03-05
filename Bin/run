@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require_relative("../Config/environment")
 
-Cli.new.welcome.run
+Cli.new.welcome

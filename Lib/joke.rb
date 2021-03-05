@@ -13,15 +13,21 @@ class Joke
                
         @@all << self
     end
-    # find one the types of jokes ( take in a type input )
+ 
     def self.single
         @@all.select do |object|
             object.type == "single"
+        end
+    end
+    def self.twopart
+        @@all.select do |object|
+            object.type == "twopart"
+            #binding.pry
         end
     end
 
     def self.all
         @@all
     end
-
+    
 end

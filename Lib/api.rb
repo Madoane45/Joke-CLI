@@ -8,7 +8,7 @@ require "json"
 class Api
 
     def self.joke_api_random
-        url = URI("https://v2.jokeapi.dev/joke/Any?amount=5safe-mode")
+        url = URI("https://v2.jokeapi.dev/joke/Any?amount=5safe-modetype=twopart")
 
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
@@ -23,7 +23,7 @@ class Api
         array_hashes = data["jokes"]
         array_hashes.each do |hash|
             Joke.new(hash)
-        
+        #binding.pry
         end
        
         
